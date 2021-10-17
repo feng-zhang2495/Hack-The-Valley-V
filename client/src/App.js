@@ -1,7 +1,20 @@
 import React from "react";
-import Content from "./components/Content";
+
+import { BrowserRouter as Router, 
+  Route,
+  Switch,
+  Link,
+  Redirect
+} from 'react-router-dom'
+
+
+//Pages
+import Content from "./pages/Home";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Error404 from "./pages/Error404";
+import contact from "./pages/Contact";
+import Signup from "./pages/Signup";
+
 
 
 function App() {
@@ -16,18 +29,18 @@ function App() {
 
   return (
     <Router>
-    <div className="App">
-      
+
       <Navbar />
       {/* MAIN PAGE */}
-      <Route path='/' exact render={(props) => (
-        <>
-          <Content />
-          <p>{!data ? "Loading..." : data}</p>
-        </>
-      )} />
-    
-    </div>
+      <Switch>
+        <Route exact path='/' component={Content}/>
+        <Route path="/404" component={Error404}/>
+        <Route path="/contact" component={contact}/>
+        <Route path="/signup" component={Signup}/>
+
+        <Redirect to="/404"/>
+      </Switch>
+
     </Router>
   );
 }

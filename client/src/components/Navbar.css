@@ -1,16 +1,12 @@
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:indigo;
+  list-style-type: none;
+  overflow: hidden;
+  width: 100%;
+  background-color:darkslategrey;
 }
 
 .navTitle {
-  padding-top: 10 px;
-  padding-left: 10 px;
   float: left;
-  color: red;
 }
 
 li {
@@ -26,10 +22,10 @@ li a {
 }
 
 li a:hover {
-  background-color:crimson;
+  background-color:black;
 }
 
 .active {
-    background-color:deeppink;
+  background-color:deeppink;
 }
 
