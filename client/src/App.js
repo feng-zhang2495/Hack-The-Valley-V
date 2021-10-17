@@ -48,19 +48,3 @@ function App() {
 export default App;
 
 
-// <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>{!data ? "Loading..." : data}</p>
-//       </header>
-//     </div>
-
-
-//if (x == true) {
-//   "yes"
-// }
-// else {
-//   "no"
-// }
-// SAME AS 
-// {x ? "yes" : "no"}

@@ -32,9 +32,11 @@ const Content = (props) => {
             <footer>
                 <img className='logo' src={BLOODD} alt='blood.png' /> 
                 <div>
+                    <h2> <Link to="signup">Sign Up Now</Link> </h2>
                     <h3> Contact us </h3>
-                    <h4 className='tab'>Email  tab Instagram tab Facebook</h4>
-                    <p>Bloodsocietyinc@gmail.com </p>
+                    <h4 className='tab'> Email Instagram Facebook</h4>
+                    <p className='tab'>Bloodsocietyinc@gmail.com <a href='https://www.instagram.com/canadaslifeline/' target='blank'>BloodCanadaInstagram  </a> <a href='https://www.facebook.com/search/top?q=canadian%20blood%20services' target='blank'>BloodCanadaFacebook  </a></p>
+                    <p> © Bloodsociety </p>
                 </div>    
             </footer>
         </div>

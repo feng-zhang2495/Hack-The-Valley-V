@@ -1,32 +1,52 @@
 import { useState } from "react";
 import axios from 'axios';
+import React from "react";
+import './Signup.css';
+import BLOODD from "../assets/BLOODD.png";
+
+
+
+
 
 function Signup() {
   const [inputs, setInputs] = useState({});
+  const [currentValue, setCurrentValue] = useState(2);
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setInputs(values => ({...values, [name]: value}))
-  }
+  };
 
+
+  const selectChange = async (event) => {
+    setCurrentValue(event.target.value)
+  };
+
+  
+
+
+
+  
   //POSTING TO BACKEND
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    alert(inputs.email);
+    inputs.Bloodtype = currentValue;
+    
 
-    axios
-      .post('http://localhost:3001/info', inputs)
-      .then(() => console.log('Book Created'))
-      .catch(err => {
-        console.error(err);
+    let response = await axios.post('http://localhost:3001/info', inputs)
+    .then(function (response) {
+        console.log("THIS IS A RESPONSE" + response.data)
+        alert(response.data)
       });
-
-  }
-
+  };
+  
+  
   return (
-    <form onSubmit={handleSubmit}>
-      <label>Enter your name:
+    <div className='bg'>
+    <form onSubmit={handleSubmit} >
+      <label className='labels'>Enter your name:
+      
       <input 
         type="text" 
         name="username" 
@@ -34,7 +54,7 @@ function Signup() {
         onChange={handleChange}
       />
       </label>
-      <label>Enter your email:
+      <label className='labels'>Enter your email:
         <input 
           type="text" 
           name="email" 
@@ -42,23 +62,37 @@ function Signup() {
           onChange={handleChange}
         />
         </label>
-        <input type="submit" />
+
+        
+        <label className='labels'>Select your blood type:
+        <select id = "dropdown" onChange={selectChange}>
+          <option value="I don't know">I don't know</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B-</option>
+          <option value="B-">B-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+        </label>
+
+
+        <input className='inputs' type="submit" /> 
+     
     </form>
+    <img className='logo1' src={BLOODD} alt='blood.png' />
+    </div>
   )
-}
+};
+
+
+
 
 export default Signup
 
 
 
-{/* <select>
-                <option value="I don't know">I don't know</option>
-                <option value="AB+">AB+</option>
-                <option value="AB-">AB-</option>
-                <option selected value="A+">A+</option>
-                <option value="A-">A-</option>
-                <option value="B+">B-</option>
-                <option value="B-">B-</option>
-                <option value="O+">O+</option>
-                <option value="O-">O-</option>
-            </select> */}
+
+
