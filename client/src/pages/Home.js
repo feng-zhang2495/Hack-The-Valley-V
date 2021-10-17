@@ -2,6 +2,9 @@ import '../stylesheets/Home.css';
 import { Link } from 'react-router-dom';
 import BLOODD from "../assets/BLOODD.png";
 import donateblood from "../assets/donateblood.png";
+import injection from "../assets/injection.png"
+import clock from "../assets/clock.png"
+import requirements from "../assets/requirements.png"
 
 
 const Content = (props) => {
@@ -29,6 +32,50 @@ const Content = (props) => {
                 </div>
             </div>
 
+            <div className='FAQ'>
+                <h2 className={{textAlign: 'center'}}>
+                    Frequently Asked Questions
+                </h2>
+            </div>
+            
+            <div className="section2">
+                
+                <div class="column-left">
+                    <img src={requirements} alt='requirement' height="150" width="150"/>
+                    <h3 className='textContainers'>
+                        Am I Eligible to Donate Blood? 
+                    </h3>
+                    <p className='paragraphs'>To be able to donate blood, you must:
+                        be at least 17 years of age, weigh At least 110 lbs, and be able to perform everyday tasks. 
+                        To see all eligibility requirements, visit this link: <a href="https://www.redcrossblood.org/faq.html#eligibility">Red Cross Blood</a>
+                    </p>
+                </div>
+
+                <div className="column-center">
+                    <img className='injectionImg' src={injection} alt='injection' height="150" width="150"/>
+                    <h3 className='textContainers'>
+                        Will the needle hurt?
+                    </h3>
+                    <p className='paragraphs'>Only for a moment. Pinch the fleshy, soft underside of your arm. 
+                    That pinch is similar to what you will feel when the needle is inserted. 
+                    </p>
+                </div>
+                    
+                <div className="column-right">
+                    <img src={clock} alt='clock' height="150" width="150"/>
+                     <h3 className='textContainers'>
+                        How Long Will The Process Take?
+                    </h3>
+                    <p className='paragraphs'>
+                    The entire process takes just over 1 hour; 
+                    the actual donation of blood takes 8 to 10 minutes. 
+                    However, the time varies slightly with each person depending on several factors
+                    including health history.
+                    </p>
+                </div>
+                    
+            </div>
+
             <footer>
                 <img className='logo' src={BLOODD} alt='blood.png' /> 
                 <div>
@@ -38,6 +85,7 @@ const Content = (props) => {
                     <p className='tab'>Bloodsocietyinc@gmail.com <a href='https://www.instagram.com/canadaslifeline/' target='blank'>BloodCanadaInstagram  </a> <a href='https://www.facebook.com/search/top?q=canadian%20blood%20services' target='blank'>BloodCanadaFacebook  </a></p>
                     <p> © Bloodsociety </p>
                 </div>    
+                <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             </footer>
         </div>
     )
