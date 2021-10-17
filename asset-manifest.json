@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4e1aeb35.chunk.css",
+    "main.js": "/static/js/main.a40439a6.chunk.js",
+    "main.js.map": "/static/js/main.a40439a6.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2f672269.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2f672269.js.map",
+    "static/js/2.c4560e95.chunk.js": "/static/js/2.c4560e95.chunk.js",
+    "static/js/2.c4560e95.chunk.js.map": "/static/js/2.c4560e95.chunk.js.map",
+    "static/js/3.82b40c95.chunk.js": "/static/js/3.82b40c95.chunk.js",
+    "static/js/3.82b40c95.chunk.js.map": "/static/js/3.82b40c95.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4e1aeb35.chunk.css.map": "/static/css/main.4e1aeb35.chunk.css.map",
+    "static/js/2.c4560e95.chunk.js.LICENSE.txt": "/static/js/2.c4560e95.chunk.js.LICENSE.txt",
+    "static/media/BLOODD.a976e148.png": "/static/media/BLOODD.a976e148.png",
+    "static/media/Home.css": "/static/media/bannnnnner.7448057b.png",
+    "static/media/clock.17bdc628.png": "/static/media/clock.17bdc628.png",
+    "static/media/donateblood.5c15008a.png": "/static/media/donateblood.5c15008a.png",
+    "static/media/injection.b04feb14.png": "/static/media/injection.b04feb14.png",
+    "static/media/requirements.4648634a.png": "/static/media/requirements.4648634a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f672269.js",
+    "static/js/2.c4560e95.chunk.js",
+    "static/css/main.4e1aeb35.chunk.css",
+    "static/js/main.a40439a6.chunk.js"
+  ]
+}
