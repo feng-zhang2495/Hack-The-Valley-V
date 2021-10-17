@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from 'axios';
 import React from "react";
-import './Signup.css';
+import '../stylesheets/Signup.css';
 import BLOODD from "../assets/BLOODD.png";
 
 
@@ -44,28 +44,34 @@ function Signup() {
   
   return (
     <div className='bg'>
-    <form onSubmit={handleSubmit} >
-      <label className='labels'>Enter your name:
+    <form className='formbg' onSubmit={handleSubmit} >
+        <div className='container'>
+        <h1 className='pad'>Sign up</h1>
+        <p className='pad'>Sign up for an email subscription to our website</p>
+        <hr className='paddown'>
+        </hr>
+      <label>Enter your name:
       
-      <input 
+      <input className='dropbox'
         type="text" 
         name="username" 
         value={inputs.username || ""} 
         onChange={handleChange}
       />
       </label>
-      <label className='labels'>Enter your email:
-        <input 
+      <label>Enter your email:
+        <input className='dropbox'
           type="text" 
           name="email" 
           value={inputs.email || ""} 
           onChange={handleChange}
         />
+        
         </label>
 
         
-        <label className='labels'>Select your blood type:
-        <select id = "dropdown" onChange={selectChange}>
+        <label>Select your blood type:
+        <select className='dropbox' id = "dropdown" onChange={selectChange}>
           <option value="I don't know">I don't know</option>
           <option value="AB+">AB+</option>
           <option value="AB-">AB-</option>
@@ -79,10 +85,10 @@ function Signup() {
         </label>
 
 
-        <input className='inputs' type="submit" /> 
-     
+            <input className='dropbox' type="submit" /> 
+        </div>
     </form>
-    <img className='logo1' src={BLOODD} alt='blood.png' />
+    {/* <img className='logo1' src={BLOODD} alt='blood.png' /> */}
     </div>
   )
 };

@@ -84,6 +84,8 @@ app.post('/info', async function(req, res) {
         Bloodtype: req.body.Bloodtype
     };
 
+    
+
     //MAIL
     var mailOptions = await {
         from: data.emailUser,
@@ -95,13 +97,19 @@ app.post('/info', async function(req, res) {
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
         console.log(error);
-        res.send("Email failed to send!")
+        res.send("Email failed to send! Check your email adress.")
         } else {
         console.log('Email sent: ' + info.response);
         res.send("Email sent successfully!")
         }
     });
-      
+
+    //INSERTS CREDENTIALS INTO DATABASE
+    var sql = "INSERT INTO visitor (name, email, bloodType) VALUES ('"+credentials.Name+"', '"+credentials.Email+"', '"+credentials.Bloodtype+"')";
+    con.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log("Credentials inserted");
+    });
 });
 
 

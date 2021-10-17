@@ -1,4 +1,4 @@
-import './Home.css';
+import '../stylesheets/Home.css';
 import { Link } from 'react-router-dom';
 import BLOODD from "../assets/BLOODD.png";
 import donateblood from "../assets/donateblood.png";
@@ -19,12 +19,12 @@ const Content = (props) => {
             
             <div className='columns'>
                 <div className='leftcolumn'>
-                    <h3 style = {{marginBottom: 30 }}>Why you should donate blood</h3>
+                    <h3 style = {{marginBottom: 40 }}>Why you should donate blood</h3>
                     <p>Donating blood helps save lives. Blood is used in all kinds of medical treatments, and is used for a large range of medical complications. Anyone could end up needing blood, and the blood someone donates may end up saving their lives. Because blood can only be stored for a certain period of time, there is a constant demand for blood, making it even more precious. By donating blood, you may end up giving someone the most precious thing to them, their life.</p>
                 </div>
 
                 <div className='rightcolumn'>
-                    <h3 style = {{marginBottom: 30 }}> More about blood donations</h3>
+                    <h3 style = {{marginBottom: 50 }}> More about blood donations</h3>
                     <p>Read more at <a href='https://blood.ca/' target='_blank'>blood.ca</a></p>
                 </div>
             </div>
