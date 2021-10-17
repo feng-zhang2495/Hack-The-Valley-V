@@ -7,7 +7,7 @@ const Button = (props) => {
 }
 
 Button.defaultProps={
-    button: 'Default',
+    button: 'Button name',
     color: 'black'
 }
 

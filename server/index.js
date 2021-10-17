@@ -7,6 +7,7 @@ let data = JSON.parse(rawdata);
 
 const name = "BloodInfo"
 
+//DB CONNECTION
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -32,7 +33,6 @@ var con = mysql.createConnection({
     }
   );
 });
-
 
 
 
